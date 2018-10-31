@@ -1,13 +1,18 @@
 'use strict';
 
-let f, g;
-function foo() {
-  let x;
-  f = function() { return ++x; };
-  g = function() { return --x; };
-  x = 1;
-  console.log('inside foo, call to f(): ' + f());
-}
-foo();  
-console.log('call to g(): ' + g()); 
-console.log('call to f(): ' + f()); 
+var Moduuli = function foo(f, g) {
+  let x = 0;
+    return {
+      kasvata: function() {
+        return x++;
+      },
+      vahenna: function() {
+        return x--;
+      }
+  };
+}();
+
+console.log("kasvata " + Moduuli.kasvata()); 
+console.log("kasvata " + Moduuli.kasvata()); 
+console.log("kasvata " + Moduuli.kasvata()); 
+console.log("vähennä " + Moduuli.vahenna()); 
