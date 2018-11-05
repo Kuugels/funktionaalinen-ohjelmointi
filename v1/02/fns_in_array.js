@@ -16,7 +16,7 @@ const pipeline  = [   // 2D-muunnoksia
     },
     
     function rotate(p) {
-        return { x: p.x*Math.cos(180) - p.y*Math.sin(180), y: p.x*Math.sin(180) + p.y*Math.cos(180) };
+        return { x: p.x*Math.cos(Math.PI) - p.y*Math.sin(Math.PI), y: p.x*Math.sin(Math.PI) + p.y*Math.cos(Math.PI) };
     }
 ];
 

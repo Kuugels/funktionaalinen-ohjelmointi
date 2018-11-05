@@ -1,4 +1,4 @@
-[ 
+var movies = [ 
 		{ 
  			title: 'Harry Potter and the Deathly Hallows: Part 2', 
  			director: 'David Yates', 
@@ -54,5 +54,13 @@
  			director: 'Hayao Miyazaki', 
  			release: 2001 
  		} 
- 	]	 
+ 	];
+ 	
+var newArr = movies.map(movie => 
+    ({title: movie.title, release: movie.release})
+);
+console.log("mapped", newArr);
+
+var filteredArr = movies.filter(movie => movie.release > 2011);
+console.log("filtered", filteredArr);
  

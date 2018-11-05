@@ -1,6 +1,6 @@
 'use strict';
 
-var Moduuli = function foo(f, g) {
+var Moduuli = function (num) {
   let x = 0;
     return {
       kasvata: function() {
@@ -15,4 +15,6 @@ var Moduuli = function foo(f, g) {
 console.log("kasvata " + Moduuli.kasvata()); 
 console.log("kasvata " + Moduuli.kasvata()); 
 console.log("kasvata " + Moduuli.kasvata()); 
+console.log("vähennä " + Moduuli.vahenna()); 
+console.log("vähennä " + Moduuli.vahenna()); 
 console.log("vähennä " + Moduuli.vahenna()); 
