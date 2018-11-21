@@ -24,17 +24,20 @@ public class OmaListaKollektori<T> implements Collector<T, List<T>, List<T>> {
 */
     @Override
     public Supplier<List<T>> supplier() {     // () -> T
+        System.out.println("Supplier");
         return () -> new CopyOnWriteArrayList<>();
     }
 
 
     @Override
     public BiConsumer<List<T>, T> accumulator() {  // T, U -> void
+        System.out.println("Adding value");
         return (list, item) -> list.add(item);
     }
 
     @Override
     public BinaryOperator<List<T>> combiner() {   // T, T -> T
+        System.out.println("Combining list");
         return (list1, list2) -> {
             //System.out.println("c: ");
             list1.addAll(list2);
@@ -45,6 +48,7 @@ public class OmaListaKollektori<T> implements Collector<T, List<T>, List<T>> {
     @Override
     public Function<List<T>, List<T>> finisher() {
         //return list -> list;  
+        System.out.println("List finished");
         return Function.identity();
     }
 
