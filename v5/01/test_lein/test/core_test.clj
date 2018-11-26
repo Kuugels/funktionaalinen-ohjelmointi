@@ -2,6 +2,8 @@
     (:use projekti.core)
     (:use  midje.sweet))
 
+(defn square [number] (* number number))
+
 (facts "square tehtävä 4"
   (square 2) => 4
   (square 7) => 49

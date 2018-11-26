@@ -1,0 +1,12 @@
+
+joku hasu lasku hihi
+    (+(* 2 5)4)
+
+joku toine hasu lasku höhö
+    (+ 1 2 3 4 5)
+   
+joku ei hasu funktio
+    ((fn [name] (str "Tervetuloa Tylypahkaan " name)) "Samuli")
+
+joku semi hasu map juttu(ei ollu ollenkaa hasu oikeesti)
+    (println :middle ({:name {:first "Urho" :middle "Kaleva" :last "Kekkonen"}}))

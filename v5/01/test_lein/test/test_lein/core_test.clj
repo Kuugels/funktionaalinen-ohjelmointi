@@ -1,0 +1,10 @@
+(:use projekti.core)
+(:use  midje.sweet))
+
+(ns test-lein.core-test
+  (:require [clojure.test :refer :all]
+            [test-lein.core :refer :all]))
+
+(deftest a-test
+  (testing "FIXME, I fail."
+    (is (= 0 1))))
