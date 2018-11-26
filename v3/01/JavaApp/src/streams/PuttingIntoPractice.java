@@ -22,10 +22,10 @@ public class PuttingIntoPractice{
         );	
         //
         List<Transaction> teht2 = transactions.stream()
-                                               .map(transaction -> transaction.getYear() > 2012 && transaction.getValue() > 900)
+                                               .filter(transaction -> transaction.getYear() > 2011 && transaction.getValue() > 900)
                                                .collect(toList());
         
-        System.out.println(teht2);
+        System.out.println("teht2 : " + teht2);
         
         // Query 1: Find all transactions from year 2011 and sort them by value (small to high).
         List<Transaction> tr2011 = transactions.stream()
