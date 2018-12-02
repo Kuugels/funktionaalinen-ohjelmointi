@@ -169,3 +169,27 @@
 
 (re-find #"^left-" "wongleblart")
 ; => nil
+
+
+(defn parillinen1
+  []
+  (let [luku (read-line)]
+    (println (odd? (Integer/parseInt luku)))
+  )
+)
+
+(defn parillinen
+  []
+  (loop [luku (read-line)]
+    (if (number? (Integer/parseInt luku))
+      (println (odd? (Integer/parseInt luku)))
+      (recur (luku (read-line)))
+    )
+  )
+)
+
+
+
+(if (= (mod kierros 3) 0)
+        (println (str kierros " on jaollinen kolmella"))
+        (println (str kierros " ei ole jaollinen")))
